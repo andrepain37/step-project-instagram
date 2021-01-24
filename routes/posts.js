@@ -148,6 +148,7 @@ router.post('/', async (req, res) => {
           likes: posts[i].likesUser.length,
           image: req.generateUrl(posts[i].image),
           user: {
+            id: posts[i].user[0]._id,
             nickname: posts[i].user[0].nickname,
             image: posts[i].user[0].image
           },
